@@ -1,3 +1,3 @@
-module learn
+module project
 
 go 1.17
