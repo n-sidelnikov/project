@@ -22,20 +22,20 @@ func TestHello(t *testing.T) {
 	})
 }
 
-// func TestAdd(t *testing.T) {
-// 	sum := Add(2, 4)
-// 	expected := 6
+func TestAdd(t *testing.T) {
+	sum := Add(2, 4)
+	expected := 6
 
-// 	if sum != expected {
-// 		t.Errorf("expected %d sum %d", expected, sum)
-// 	}
-// }
+	if sum != expected {
+		t.Errorf("expected %d sum %d", expected, sum)
+	}
+}
 
-// func TestRepeat(t *testing.T) {
-// 	repeated := Repeat("a")
-// 	expected := "aaaaa"
+func TestRepeat(t *testing.T) {
+	repeated := Repeat("a")
+	expected := "aaaaa"
 
-// 	if repeated != expected {
-// 		t.Errorf("expected %q but got %q", expected, repeated)
-// 	}
-// }
+	if repeated != expected {
+		t.Errorf("expected %q but got %q", expected, repeated)
+	}
+}

@@ -1,7 +1,11 @@
 FROM ubuntu:20.04
 
-RUN export DEBIAN_FRONTEND=noninteractive && apt update && apt install -yq golang
+RUN apt update && apt install -yq wget && wget https://golang.org/dl/go1.18.linux-amd64.tar.gz
 
-COPY /tests/hello_test.go /
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.18.linux-amd64.tar.gz
 
-CMD go test -run hello_test.go
+ENV PATH=$PATH:/usr/local/go/bin
+
+COPY /tests /home
+
+CMD cd /home && go test -v
